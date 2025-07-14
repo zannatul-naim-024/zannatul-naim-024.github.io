@@ -27,7 +27,7 @@ class PortfolioNavigation {
         this.isScrolling = false;
         this.currentActiveSection = null;
         this.lastScrollTop = 0;
-        this.currentTheme = 'dark'; // Default theme
+        this.currentTheme = 'dark'; // ALWAYS DEFAULT TO DARK
 
         // Initialize the navigation system
         this.init();
@@ -363,7 +363,7 @@ class PortfolioNavigation {
     }
 
     /**
-     * Load saved theme preference
+     * Load saved theme preference - ALWAYS DEFAULTS TO DARK
      */
     loadSavedTheme() {
         try {
@@ -376,22 +376,10 @@ class PortfolioNavigation {
             console.warn('Could not load theme preference:', error);
         }
 
-        // Check system preference
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-            this.setTheme('light');
-        } else {
-            this.setTheme('dark');
-        }
-
-        // Listen for system theme changes
-        if (window.matchMedia) {
-            window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (event) => {
-                // Only auto-switch if user hasn't manually set a preference
-                if (!localStorage.getItem('portfolio-theme')) {
-                    this.setTheme(event.matches ? 'light' : 'dark');
-                }
-            });
-        }
+        // ALWAYS DEFAULT TO DARK MODE (no system preference check)
+        this.setTheme('dark');
+        
+        console.log('No saved theme preference found. Defaulting to dark mode.');
     }
 
     /**
