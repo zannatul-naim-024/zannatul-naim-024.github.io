@@ -875,6 +875,108 @@ section h2::after {
     margin-bottom: 0.5rem;
 }
 
+/* Resume */
+.resume {
+    background: rgba(255, 255, 255, 0.02);
+    text-align: center;
+}
+
+[data-theme="light"] .resume {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.resume-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.resume-description {
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 4vw, 2rem);
+    flex-wrap: wrap;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: clamp(1rem, 2.5vw, 1.2rem) clamp(2rem, 5vw, 2.5rem);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    border: 2px solid transparent;
+    min-width: 180px;
+    text-align: center;
+}
+
+.view-btn {
+    background: var(--primary-gradient);
+    color: var(--text-primary);
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+}
+
+.download-btn {
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] .download-btn {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.resume-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: var(--transition-smooth);
+}
+
+.resume-btn:hover::before {
+    left: 100%;
+}
+
+.view-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px rgba(102, 126, 234, 0.4);
+}
+
+.download-btn:hover {
+    background: var(--accent-gradient);
+    color: var(--text-primary);
+    border-color: transparent;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px rgba(79, 172, 254, 0.3);
+}
+
+.resume-btn i {
+    font-size: 1.2rem;
+    transition: var(--transition-smooth);
+}
+
+.resume-btn:hover i {
+    transform: scale(1.1);
+}
+
 /* Animations */
 @keyframes slideInUp {
     from {
@@ -1247,6 +1349,19 @@ section h2::after {
         font-size: 0.8rem;
         padding: 0.2rem 0.6rem;
     }
+    
+    .resume-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .resume-btn {
+        width: 100%;
+        max-width: 280px;
+        min-width: auto;
+        padding: 1rem 2rem;
+    }
 }
 
 /* Very small screens (360px and down) */
@@ -1292,14 +1407,16 @@ section h2::after {
     .social-links a:hover,
     .project-card:hover,
     .skills-grid div:hover,
-    .timeline-item:hover {
+    .timeline-item:hover,
+    .resume-btn:hover {
         transform: none;
     }
     
     .navbar .nav-menu li a,
     .social-links a,
     .mobile-toggle,
-    .theme-toggle {
+    .theme-toggle,
+    .resume-btn {
         min-height: 44px;
         min-width: 44px;
     }
