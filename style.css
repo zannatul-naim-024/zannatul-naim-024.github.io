@@ -1517,3 +1517,95 @@ section h2::after {
     opacity: 1;
     transform: translateY(0);
 }
+
+.achievements {
+    background: rgba(255, 255, 255, 0.02);
+    padding: clamp(60px, 12vw, 100px) 0;
+}
+
+[data-theme="light"] .achievements {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.achievements .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.achievements h2 {
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: clamp(3rem, 8vw, 4rem);
+    font-weight: 700;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    line-height: 1.2;
+}
+
+.achievements h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-gradient);
+    border-radius: 2px;
+}
+
+.achievements ul {
+    list-style: disc inside;
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 2.2vw, 1.1rem);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.achievements ul li {
+    background: var(--bg-card);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: 2.2rem;
+    padding: 1.5rem 2.5rem;
+    box-shadow: 0 6px 32px rgba(102, 126, 234, 0.08);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    transition: var(--transition-smooth);
+    position: relative;
+    border: 1.5px solid rgba(102, 126, 234, 0.08);
+}
+
+.achievements ul li:last-child {
+    margin-bottom: 0;
+}
+
+.achievements ul li a {
+    display: inline-block;
+    margin-top: 0.7rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.achievements ul li a:hover {
+    color: var(--primary-color);
+    text-decoration: underline wavy;
+}
+
+@media (max-width: 600px) {
+  .achievements ul li {
+    padding: 1rem 1.1rem;
+    font-size: 0.98rem;
+  }
+}
+
+.achievements ul li:hover {
+    background: var(--bg-card-hover);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+}
