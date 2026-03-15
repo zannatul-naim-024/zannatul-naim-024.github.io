@@ -1,0 +1,22 @@
+[
+  {
+    "category": "Languages",
+    "items": "C/C++, Go (Golang), Java, JavaScript, Python, SQL, TypeScript"
+  },
+  {
+    "category": "Frameworks & Libraries",
+    "items": "Django, Express.js, FastAPI, Flask, Prisma, Spring Boot"
+  },
+  {
+    "category": "Tools & Technologies",
+    "items": "Docker, Git, Nginx, RabbitMQ, Redis, Serverless, Terraform"
+  },
+  {
+    "category": "Databases",
+    "items": "MongoDB, MySQL, Oracle, PostgreSQL"
+  },
+  {
+    "category": "Cloud Platforms",
+    "items": "AWS, GCP, Microsoft Azure"
+  }
+]

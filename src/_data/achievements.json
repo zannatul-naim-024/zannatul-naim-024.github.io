@@ -1,0 +1,26 @@
+[
+  {
+    "title": "DevOps Hackathon Organizer:",
+    "description": "Arranged DevOps hackathon with 50+ participating teams, created question sets and marking criteria, and participated in the judging process.",
+    "link": "https://devops-hackathon.vercel.app/",
+    "linkLabel": "Event Details"
+  },
+  {
+    "title": "DU-IIT IT-Verse 2023 (DevOps):",
+    "description": "Winner – Built tax return platform for 1,000+ users. [AWS ECS, GitHub Actions, Terraform]",
+    "link": "https://github.com/TaxWizard-BUET-Daredevils",
+    "linkLabel": "Project Repository"
+  },
+  {
+    "title": "BUET CSE Fest Hackathon 2022 (DevOps):",
+    "description": "Winner – Built vaccination registration system with zero downtime. [AWS CodePipeline, Load Balancer]",
+    "link": null,
+    "linkLabel": null
+  },
+  {
+    "title": "DevOps Workshop Instructor (BUET CSE Fest 2023):",
+    "description": "Led a hands-on DevOps workshop for hackathon participants, demonstrating CI/CD pipelines with GitHub Actions and Docker Compose.",
+    "link": "https://github.com/zannatul-naim-024/devops-workshop-demo",
+    "linkLabel": "View Hands-on Material"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Scalable Websocket",
+    "description": "Go WebSocket server with RabbitMQ/Redis, supports 10,000+ concurrent connections",
+    "url": "https://github.com/zannatul-naim-024/scalable-websocket",
+    "tags": ["Go", "RabbitMQ", "Redis", "k6"]
+  },
+  {
+    "name": "Soul Animal",
+    "description": "IaC for Azure, reduced manual errors by 85%, zero-trust security",
+    "url": "https://github.com/zannatul-naim-024/soul-animal",
+    "tags": ["Terraform", "Azure"]
+  },
+  {
+    "name": "POC Learning Platform",
+    "description": "Serverless microservices for scalable online learning",
+    "url": null,
+    "tags": ["Express.js", "Serverless", "AWS"]
+  }
+]

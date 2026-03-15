@@ -1,0 +1,62 @@
+[
+  {
+    "role": "Software Engineer",
+    "company": "Cielara AI",
+    "location": "Redmond, Washington, United States (Remote)",
+    "start": "Nov 2025",
+    "end": "Present",
+    "bullets": [
+      "Developing digital twin technology to enable real-time monitoring, simulation, and optimization of distributed systems."
+    ]
+  },
+  {
+    "role": "Software Engineer I",
+    "company": "Synesis IT PLC",
+    "location": "Dhaka, Bangladesh",
+    "start": "June 2024",
+    "end": "Oct 2025",
+    "bullets": [
+      "Design and implement a real-time notification system using WebSockets, RabbitMQ, and Redis.",
+      "Develop a WebRTC monitoring system to analyze video quality and optimize performance.",
+      "Engineer a scalable centralized management system with Spring Boot 3 and React.js.",
+      "Build a cross-platform desktop application using Wails and Golang."
+    ]
+  },
+  {
+    "role": "Founding Engineer",
+    "company": "Sentien.io",
+    "location": "Newark, Delaware, United States",
+    "start": "Jan 2024",
+    "end": "June 2024",
+    "bullets": [
+      "Directed and mentored a team of 5 engineers, increasing team productivity.",
+      "Leveraged Terraform for IaC, achieving a 47.5% reduction in cloud expenditures.",
+      "Built and automated CI/CD pipelines using GitHub Actions for Windows and Linux."
+    ]
+  },
+  {
+    "role": "Software Engineer",
+    "company": "Warranty-Worx",
+    "location": "California, United States",
+    "start": "Mar 2023",
+    "end": "Dec 2023",
+    "bullets": [
+      "Designed and implemented a house warranty management platform using the MERN stack.",
+      "Created RESTful APIs and an automated system for warranty deadline notifications.",
+      "Deployed and maintained application infrastructure on Render.com, ensuring 99.9% uptime.",
+      "Reduced claim processing time by 60% with an enhanced claim processing system."
+    ]
+  },
+  {
+    "role": "Software Engineer",
+    "company": "ICT Cell, BUET",
+    "location": "Dhaka, Bangladesh",
+    "start": "Oct 2021",
+    "end": "Mar 2023",
+    "bullets": [
+      "Directed the backend team to launch BUET's Job Portal, serving 1,000+ users.",
+      "Achieved a 40% reduction in response times by implementing caching and optimizing PostgreSQL queries.",
+      "Managed on-premise deployment using Docker and Nginx."
+    ]
+  }
+]

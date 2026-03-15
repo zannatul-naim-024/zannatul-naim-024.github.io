@@ -1,0 +1,172 @@
+---
+layout: null
+permalink: /index.html
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-brand">{{ site.name }}</a>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle dark/light mode">
+                <i class="fas fa-sun" id="theme-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header id="about" class="header">
+        <div class="container">
+            <p class="prompt animate" data-animate-delay="0"><span>$</span> whoami</p>
+            <h1 class="animate" data-animate-delay="100">{{ site.name }}</h1>
+            <p class="lead animate" data-animate-delay="200">{{ about.tagline }}</p>
+            <p class="about-text animate" data-animate-delay="300">{{ about.bio }}</p>
+            <div class="social-links animate" data-animate-delay="400">
+                <a href="{{ about.github }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                <a href="{{ about.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:{{ about.email }}"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <p class="section-label animate" data-animate-delay="0">// experience</p>
+            <h2 class="animate" data-animate-delay="50">Work Experience</h2>
+            <div class="timeline">
+                {% for job in experience %}
+                <div class="timeline-item animate" data-animate-delay="{{ 100 + loop.index0 * 60 }}">
+                    <h3>{{ job.role }}</h3>
+                    <p class="company-line"><strong>{{ job.company }}</strong> · {{ job.location }}</p>
+                    <p class="date">{{ job.start }} — {{ job.end }}</p>
+                    <ul>
+                        {% for bullet in job.bullets %}
+                        <li>{{ bullet }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <div class="container">
+            <p class="section-label animate" data-animate-delay="0">// education</p>
+            <h2 class="animate" data-animate-delay="50">Education</h2>
+            {% for edu in education %}
+            <div class="animate" data-animate-delay="{{ 100 + loop.index0 * 80 }}">
+                <h3>{{ edu.school }}</h3>
+                <p>{{ edu.degree }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <p class="section-label animate" data-animate-delay="0">// projects</p>
+            <h2 class="animate" data-animate-delay="50">Projects</h2>
+            <div class="project-grid">
+                {% for project in projects %}
+                <div class="project-card animate" data-animate-delay="{{ 100 + loop.index0 * 80 }}">
+                    <div class="project-header">
+                        <h3>{{ project.name }}</h3>
+                        {% if project.url %}
+                        <a href="{{ project.url }}" target="_blank" rel="noopener" class="github-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+                    <p>{{ project.description }}</p>
+                    <div class="tech-tags">
+                        {% for tag in project.tags %}
+                        <span class="tech-tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="resume">
+        <div class="container">
+            <p class="section-label animate" data-animate-delay="0">// resume</p>
+            <h2 class="animate" data-animate-delay="50">Resume</h2>
+            <div class="resume-content animate" data-animate-delay="100">
+                <p class="resume-description">
+                    Download my latest resume to learn more about my professional experience, skills, and achievements in software engineering.
+                </p>
+                <div class="resume-buttons">
+                    <a href="public/{{ site.resumePdf }}" target="_blank" rel="noopener" class="resume-btn view-btn">
+                        <i class="fas fa-eye"></i>
+                        View Resume
+                    </a>
+                    <a href="public/{{ site.resumePdf }}" download="{{ site.resumeDownloadName }}" class="resume-btn download-btn">
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <p class="section-label animate" data-animate-delay="0">// skills</p>
+            <h2 class="animate" data-animate-delay="50">Technical Skills</h2>
+            <div class="skills-grid">
+                {% for group in skills %}
+                <div class="animate" data-animate-delay="{{ 100 + loop.index0 * 60 }}">
+                    <h4>{{ group.category }}</h4>
+                    <p>{{ group.items }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <p class="section-label animate" data-animate-delay="0">// achievements</p>
+            <h2 class="animate" data-animate-delay="50">Extracurricular & Achievements</h2>
+            <ul>
+                {% for item in achievements %}
+                <li class="animate" data-animate-delay="{{ 100 + loop.index0 * 70 }}">
+                    <strong>{{ item.title }}</strong>
+                    {{ item.description }}
+                    {% if item.link %}
+                    <br>
+                    <a href="{{ item.link }}" target="_blank" rel="noopener" class="achievement-link">{{ item.linkLabel }}</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
