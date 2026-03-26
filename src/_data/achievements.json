@@ -1,5 +1,11 @@
 [
   {
+    "title": "BUET CSE Fest 2026 DevOps Hackathon Mentor:",
+    "description": "Mentored student teams on designing and deploying resilient distributed systems for production-grade DevOps challenges.",
+    "link": null,
+    "linkLabel": null
+  },
+  {
     "title": "DevOps Hackathon Organizer:",
     "description": "Arranged DevOps hackathon with 50+ participating teams, created question sets and marking criteria, and participated in the judging process.",
     "link": "https://devops-hackathon.vercel.app/",
